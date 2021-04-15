@@ -1,0 +1,86 @@
+<html>
+<head>
+  <style>
+  h1{
+      font-size: 75px;
+      color: #AC6142;
+   }
+   p{
+     Font-size: 25px;
+     color: #AC6142;
+   }
+   #result{
+     Font-size: 15px;
+     color: #AC6142;
+   }
+   body{
+     background-color: #F6E4C3;
+   }
+   #input{
+     Font-size: 15px;
+     color: #AC6142;
+     background-color: white;
+   }
+  </style>
+  <script>
+  function RunFor1()
+  {
+      var x = document.getElementById('start').value;
+      var y = document.getElementById('end').value;
+      x = parseInt(x);
+      y = parseInt(y);
+      var res = 0;
+      var nums = "Miles to Furlongs <br><hr><br>";
+    for(var i = x; i <=y; i++)
+    {
+      res = i * 8;
+      nums = nums + i + " - " + res + "<br>";
+    }
+    document.getElementById("result").innerHTML = nums;
+  }
+    function RunFor2()
+    {
+      var x = document.getElementById('start').value;
+      var y = document.getElementById('end').value;
+      x = parseInt(x);
+      y = parseInt(y);
+      var res = 0;
+      var nums = " Slugs to Pounds <br><hr><br>";
+    for(var i = x; i <=y; i++)
+    {
+      res = i * 32.174;
+      nums = nums + i + " - " + res + "<br>";
+    }
+    document.getElementById("result").innerHTML = nums;
+  }
+      function RunFor3()
+      {
+      var x = document.getElementById('start').value;
+      var y = document.getElementById('end').value;
+      x = parseInt(x);
+      y = parseInt(y);
+      var res = 0;
+      var nums = "FortNights to Days <br><hr><br>";
+    for(var i = x; i <=y; i++)
+    {
+      res = i * 14;
+      nums = nums + i + " - " + res + "<br>";
+    }
+    document.getElementById("result").innerHTML = nums;
+  }
+    </script>
+  </head>
+  <body>
+    <h1> Conversion Calculator </h1>
+    <p> Start value </p>
+    <input type = "text" id = "start">
+    <p> End  Value </p>
+    <input type = "text" id = "end">
+    <p> Convert </P>
+    <input type = "button" value = "Miles to Furlongs" onclick = "RunFor1()" id= input>
+    <input type = "button" value = "Slugs to Pounds" onclick = "RunFor2()" id= input>
+    <input type = "button" value = "FortNights to Days" onclick = "RunFor3()" id= input>
+    <br><hr><br>
+    <p id = "result"></p>
+    </body>
+</html>
